@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<h3>Team Roster:</h3>
+<br>
+<h3>{{ roster.team_name }}</h3>
+<h4>{{ roster.coach_name }}</h4>
+
+<form action="/update-roster/{{roster.roster_id}}" method="POST"> 
+    <a href="/update-roster/{{roster.roster_id}}"> <button>Update Roster</button></a>
+    </form>
+<a href="/delete-roster/{{roster.roster_id}}"> <button>Delete</button> </a>
+{% for message in get_flashed_messages() %}
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        {{ message }}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+{%endfor%}
+{% endblock %}
+
+

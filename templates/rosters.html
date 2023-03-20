@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<h3>Rosters:</h3>
+    {% for roster in rosters %}
+        <h4>
+            {{ roster.team_name }}
+            <a href="/roster/{{ roster.roster_id }}"> safkjhasdhf</a>
+        </h4>
+    {% endfor %}
+{% endblock %}

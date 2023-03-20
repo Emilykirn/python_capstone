@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<h3>Add a Roster</h3>
+<br>
+<form method="POST" action="/add-roster">
+    <h4> <div>{{ form.csrf_token }}</div>
+    {{ form.coach_name.label }} <br> {{ form.coach_name(class="input") }}
+    <br>
+    {{ form.team_name.label }} <br> {{ form.team_name(class="input") }}
+    <br>
+    {{ form.submit(class="button") }}
+    </h4>
+</form>
+{% for message in get_flashed_messages() %}
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        {{ message }}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+{%endfor%}
+{% endblock %}
+

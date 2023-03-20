@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{%block body%}
+
+<h3>Update Player </h3>
+<br>
+<form action="/update-player/{{player.player_id}}" method="POST">
+<div>{{ form.csrf_token }}</div>
+<div>{{ form.first_name.label }} {{ form.first_name(class="input-box")  }}</div>
+<div>{{ form.last_name.label }} {{ form.last_name(class="input-box")  }}</div>
+<div>{{ form.player_number.label }} {{ form.player_number(class="input-box")  }}</div>
+<div>{{ form.player_position.label }} {{ form.player_position(class="input-box")  }}</div>
+<div>{{ form.roster_selection}}</div>
+<div>{{ form.submit(class="button")}}</div>
+</form>
+{% for message in get_flashed_messages() %}
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        {{ message }}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+{%endfor%}
+{% endblock %}

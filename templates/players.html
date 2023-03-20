@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<h3>Players:</h3>
+<br>
+
+    {% for player in players %}
+       <h4>
+           {{ player.first_name }}
+           <br>
+           {{ player.last_name }}
+           <br>
+           <a href="/players/{{ player.player_id }}">Player Details</a>
+        </h4>
+    {% endfor %}
+
+
+{% endblock %}

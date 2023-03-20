@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<form method="POST" action="/create-account" >
+<div>{{ form.csrf_token }}</div>
+<div>{{ form.email.label }}: {{ form.email(class="input-box") }}</div>
+<div>{{ form.password.label }}: {{ form.password(class="input-box") }}</div>
+<div>{{ form.submit(class="button")}}</div>
+</form>
+
+<a href="/login"> Login</a>
+{% endblock %}

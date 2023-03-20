@@ -1,0 +1,60 @@
+body {
+    margin:0;
+    padding:0;
+    position:relative;
+    background:url("/static/3D\ balck\ grid.jpeg") no-repeat;
+    background-size:cover;
+    height: 100vh;
+    width: 100vw;
+    font-family: 'Nanum Gothic', sans-serif;
+    color: black;
+
+}
+.button{
+    border-radius: 8px;
+    margin-top: 10px;
+
+}
+a:link{
+    color:rgb(3, 3, 91);
+}
+h4{
+    font-size: 33px;
+    color: white;
+    text-align: center;
+}
+h2{
+    color: white;
+    text-align: center;
+    margin-top: 25px;
+    font-size: 29px;
+}
+.here{
+    background-color: white;
+    color: rgb(8, 8, 8);
+    text-decoration: none;
+}
+
+.add-train{
+    color: white;
+    text-align: center;
+    border: 5px;
+    border-radius: 10px;
+}
+h3{
+    margin-top: 15px;
+    font-size: 33px;
+    color: white;
+    text-align: center;
+}
+.input_box{
+    border-radius: 18px;
+    
+}
+.input_box_select{
+    border-radius:  18px;
+    margin-top: 7px;
+}
+.input{
+    border-radius: 18px;
+}
